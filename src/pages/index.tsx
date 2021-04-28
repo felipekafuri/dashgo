@@ -2,7 +2,7 @@ import { Flex, Button, Stack } from '@chakra-ui/react'
 import React, { FormEvent, useState } from 'react'
 import { Input } from '../components/Form/Input'
 
-export default function SignIn():JSX.Element {
+export default function SignIn(): JSX.Element {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
