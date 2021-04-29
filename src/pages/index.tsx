@@ -1,6 +1,7 @@
 import { Flex, Button, Stack } from '@chakra-ui/react'
 import React, { FormEvent, useState } from 'react'
 import { Input } from '../components/Form/Input'
+import Link from 'next/link'
 
 export default function SignIn(): JSX.Element {
   const [email, setEmail] = useState('')
@@ -28,9 +29,12 @@ export default function SignIn(): JSX.Element {
           <Input name="email" type="email" label="E-mail" />
           <Input name="password" type="password" label="Senha" />
         </Stack>
-        <Button type="submit" mt={6} colorScheme="pink" size="lg">
-          Entrar
-        </Button>
+
+        <Link href="/dashboard" passHref>
+          <Button type="submit" mt={6} colorScheme="pink" size="lg">
+            Entrar
+          </Button>
+        </Link>
       </Flex>
     </Flex>
   )
